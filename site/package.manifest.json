@@ -1,0 +1,6 @@
+{
+  "version" : "1.5.2",
+  "fhirVersion" : ["4.0.1"],
+  "date" : "20230120110822",
+  "name" : "hl7.cql"
+}

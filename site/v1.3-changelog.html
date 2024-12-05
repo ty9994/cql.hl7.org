@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>All Published Versions of Clinical Quality Language</title>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="http://cql.hl7.org" name="author"/>
+
+  <link rel="stylesheet" href="dist/fhir.css"/>
+  <link rel="Prev" href="history.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="dist/bootstrap.css"/>
+  <link rel="stylesheet" href="dist/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="dist/project.css"/>
+  <link rel="stylesheet" href="dist/prism.css"/>
+  <link rel="stylesheet" href="dist/pygments-manni.css"/>
+	<link rel="stylesheet" href="dist/jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="dist/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->
+		<div class="container">  <!-- container -->
+			<a id="logo" href="index.html"><img alt="logo hl7" src="dist/cql-logo.png" width="100" height="75"/> </a>
+			<div id="hl7-status">
+				<b>Clinical Quality Language Publication Directory</b>
+			</div>
+
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org">
+					<img height="75" alt="visit the hl7 website" width="100" src="dist/hl7-logo.png"/>
+				</a>
+			</div>
+			  <!-- hl7-search -->
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a class="navbar-brand hidden" href="index.html">CQL</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+
+
+  <!-- /HEADER CONTENT -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+
+
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
+
+	<h1>1.3 Change Log</h1>
+
+
+
+	<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#stu3-reconciliation-changes">STU3 Reconciliation Changes</a></li>
+<li><a href="#stu-3-ballot-changes">STU 3 Ballot Changes</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="stu3-reconciliation-changes">STU3 Reconciliation Changes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This changelist describes the substantive changes, as well as a handful of more significant changes to the specification as a result of STU 3 comment reconciliation. For a complete list of changes, refer to the repository commit history and the ballot reconciliation spreadsheet.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>#30: Updated terminology identifiers to use URIs in examples throughout</p>
+</li>
+<li>
+<p>#36: Added discussion of code and concept declarations and literals</p>
+</li>
+<li>
+<p>#42: Specified duration of year as 365 days and month as 30 days when there is no anchor</p>
+</li>
+<li>
+<p>#43: Clarified that timezone offset normalization should only apply for time-based precisions</p>
+</li>
+<li>
+<p>#47: Added Date overloads for CalculateAge operators in ELM and CQL; AgeInYears and AgeInMonths use Date, AgeInWeeks and finer use DateTime</p>
+</li>
+<li>
+<p>#48: Added examples of Date-interval with open/closed boundaries</p>
+</li>
+<li>
+<p>#57: Added guidance on use of external functions</p>
+</li>
+<li>
+<p>#61: Added examples throughout</p>
+</li>
+<li>
+<p>#65: Added documentation of formatting strings</p>
+</li>
+<li>
+<p>#67: Clarified behavior of precision with between and other date/time functions</p>
+</li>
+<li>
+<p>#72: Added SplitOnMatches operator</p>
+</li>
+<li>
+<p>#73: Added discussion of potential pitfalls with uncertainty and date/time arithmetic</p>
+</li>
+<li>
+<p>#75: Added Concept overload for Equivalence</p>
+</li>
+<li>
+<p>#101: Updated ELM model</p>
+</li>
+<li>
+<p>#167: Clarified mixed-type signatures for interval and date/time operators and the semantics for interval promotion/demotion and when they are used</p>
+</li>
+<li>
+<p>#207: Added OperatorExpression type in ELM</p>
+</li>
+<li>
+<p>#214: Align with the FHIRPath normative ballot</p>
+</li>
+<li>
+<p>#215: Remove the ability to extract a week component</p>
+</li>
+<li>
+<p>#216: Remove the ability to say "same week as"</p>
+</li>
+<li>
+<p>#211: Symbolic date/time comparisons now occur at finest precision specified in either input</p>
+</li>
+<li>
+<p>#212: Remove unnecessary overloads of Divide and Multiply</p>
+</li>
+<li>
+<p>#217: Added choice-casting and interval promotion/demotion to conversion precedence</p>
+</li>
+<li>
+<p>#218: Added discussion of the option to require the from keyword for all queries</p>
+</li>
+<li>
+<p>#219: Changed date/time equality/comparison to return null only if the values have different levels of precision</p>
+</li>
+<li>
+<p>#220: Changed tuple equality to return null only if the values have different elements specified</p>
+</li>
+<li>
+<p>#221: Changed list membership and duplicate detection semantics throughout to use equality instead of equivalence</p>
+</li>
+<li>
+<p>#222: Add a per clause to the collapse operator</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="stu-3-ballot-changes">STU 3 Ballot Changes</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1377">1377</a>: Corrected link to Type Operators section</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1378">1378</a>: Corrected link to Type Operators section</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1379">1379</a>: Improved formatting for table 9-E</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1432">1432</a>: Added signature element to FunctionRef ELM type</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1433">1433</a>: Clarified that on and same are synonyms in timing phrases</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1434">1434</a>: Relaxed quantity operation semantics to return null rather than raise an error for invalid quantity operations</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1435">1435</a>: Exists operator now ignores null elements in lists</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1436">1436</a>: Clarified aliases are not allowed in sort clauses</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1437">1437</a>: Added Ratio system-defined type</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1438">1438</a>: Fixed take() FHIRPath mapping</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1439">1439</a>: Added difference of and duration between operators</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1440">1440</a>: Require case-sensitivity for UCUM units</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1441">1441</a>: Added clarifying guidance regarding date/time calculations involving date/time values with different timezone offsets</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1442">1442</a>: Division of like quantities results in a quantity with the default UCUM unit ('1')</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1443">1443</a>: Added implicit conversion from Integer or Decimal to Quantity</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1444">1444</a>: Added Date system-defined type</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1445">1445</a>: Clarified singular and UCUM temporal units are allowed for date/time arithmetic</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1446">1446</a>: Changed conversion of List&lt;Code&gt; to Concept from implicit to explicit</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1447">1447</a>: Added overloads of In to support List&lt;Code&gt;</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1475">1475</a>: Clarified set semantics of intersect and except</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1478">1478</a>: Clarified timezone offset handling for difference calculations</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1479">1479</a>: Clarified calendar semantics for date/time arithmetic, even when using UCUM time-period units</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1483">1483</a>: BinaryExpression and TernaryExpression ELM types are now abstract</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1500">1500</a>: Union, Intersect, and Except are now NaryExpressions</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1507">1507</a>: Generalized named type specifier rule to allow for multiple-qualifier type names</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1509">1509</a>: Clarified case-insensitive behavior of string comparison</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1538">1538</a>: Clarified instance selector behavior for missing elements</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1539">1539</a>: Clarified behavior of a quantity with a null unit</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1540">1540</a>: Corrected ELM documentation for IdentifierRef</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1541">1541</a>: Added support for Product and GeometricMean aggregate operators</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1542">1542</a>: Added support for Expand interval set operator</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1549">1549</a>: Publish CQL as a web-based specification</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1552">1552</a>: Clarified that ELM and CQL do not prescribe short-circuit evaluation</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1553">1553</a>: Clarified that parameter defaults must be compile-time evaluable</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1555">1555</a>: Relaxed semantics of conversion failures to return null instead of run-time errors</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1556">1556</a>: Clarify semantics for string overload of valueset membership operator (in)</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1560">1560</a>: Corrected population context example</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1561">1561</a>: Added singleton overloads for included in and includes</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1569">1569</a>: Corrected missing operators in operator precedence chart</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1574">1574</a>: Clarified null-handling behavior for in and contains</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1579">1579</a>: Added FHIRPath changes: Mappings for hasValue, conformsTo, memberOf, subsumes, subsumedBy, toChars, and aggregate; added $index and $total iterators</p>
+</li>
+<li>
+<p><a href="http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=1580">1580</a>: Changed ELM serialization to avoid type clash with JSON serializers</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</div>
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2016+. Clinical Quality Language Version Directory
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+<script src="dist/prism.js"> </script>
+<script src="dist/cql.js"> </script>
+
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

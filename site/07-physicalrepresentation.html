@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://hl7.org/fhir/2016May/FHIRPath.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  <title>7. Physical Representation</title>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="http://cql.hl7.org" name="author"/>
+
+  <link rel="stylesheet" href="dist/fhir.css"/>
+  <link rel="Prev" href="history.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="dist/bootstrap.css"/>
+  <link rel="stylesheet" href="dist/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="dist/project.css"/>
+  <link rel="stylesheet" href="dist/prism.css"/>
+  <link rel="stylesheet" href="dist/pygments-manni.css"/>
+	<link rel="stylesheet" href="dist/jquery-ui.css"/>
+	<link rel="stylesheet" href="dist/cql.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="dist/favicon.png"/>
+
+</head>
+<body data-feedly-mini="yes">
+	<div id="segment-header" class="segment">  <!-- segment-header -->
+		<div class="container">  <!-- container -->
+			<a id="logo" no-external="true" href="index.html"><img alt="Clinical Quality Language" src="dist/cql-logo.png" width="100" height="75"/> </a>
+			<div id="hl7-status">
+				<b>Clinical Quality Language Release 1</b>
+			</div>
+
+			<div id="hl7-nav">
+				 <a id="hl7-logo" no-external="true" href="http://www.hl7.org/">
+					<img height="75" alt="visit the hl7 website" width="100" src="dist/hl7-logo.png"/>
+				</a>
+			</div>
+			<!--<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://cql.hl7.org/search.cfm"><img alt="Search CQL" src="dist/search.png"/></a></div>-->
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a class="navbar-brand hidden" href="index.html">CQL</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li class = "dropdown">
+				  <a href="index.html" class = "dropbtn">Documentation</a>
+			  <div class = "dropdown-content">
+				  <a href="01-introduction.html">Chapter 1 - Introduction</a>
+				  <a href="02-authorsguide.html">Chapter 2 - Author's Guide</a>
+				  <a href="03-developersguide.html">Chapter 3 - Developer's Guide</a>
+				  <a href="04-logicalspecification.html">Chapter 4 - Logical Specification</a>
+				  <a href="05-languagesemantics.html">Chapter 5 - Language Semantics</a>
+				  <a href="06-translationsemantics.html">Chapter 6 - Translation Semantics</a>
+				  <a href="07-physicalrepresentation.html">Chapter 7 - Physical Representation</a>
+				  <a href="08-a-cqlsyntax.html">Appendix A - CQL Syntax Formal Specification</a>
+				  <a href="09-b-cqlreference.html">Appendix B - CQL Reference</a>
+				  <a href="10-c-referenceimplementations.html">Appendix C - Reference Implementations</a>
+				  <a href="11-d-references.html">Appendix D - References</a>
+				  <a href="12-e-acronyms.html">Appendix E - Acronyms</a>
+				  <a href="13-f-glossary.html">Appendix F - Glossary</a>
+				  <a href="14-g-formattingconventions.html">Appendix G - Conventions</a>
+				  <a href="15-h-timeintervalcalculations.html">Appendix H - Time Interval Calculation Examples</a>
+				  <a href="16-i-fhirpathtranslation.html">Appendix I - FHIRPath Function Translation</a>
+				  <a href="17-j-listoftables.html">Appendix J - List Of Tables</a>
+				  <a href="18-k-listoffigures.html">Appendix K - List Of Figures</a>
+          <a href="19-l-cqlsyntaxdiagrams.html">Appendix L - CQL Syntax Diagrams</a>
+			  </div>
+			  </li>
+        <li><a href="02-authorsguide.html">Author's Guide</a></li>
+        <li><a href="03-developersguide.html">Developer's Guide</a></li>
+        <li><a href="09-b-cqlreference.html">CQL Reference</a></li>
+              <li><a href="grammar.html">Grammar</a></li>
+			  <li><a href="elm.html">ELM</a></li>
+			  <li><a href="examples.html">Examples</a></li>
+              <li><a href="tests.html">Tests</a></li>
+							<li><a href="downloads.html">Downloads</a></li>
+              <li><a href="http://cql.hl7.org/history.html">Version History</a><!--current--></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+
+          </div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+
+
+  <!-- /HEADER CONTENT -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
+
+
+<table class="colsn"><tbody><tr><td id="wg"><a href="http://www.hl7.org/special/committees/dss/index.cfm" _target="blank">Clinical Decision Support</a> Work Group</td><td id="fmm"><a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: N</td><td id="ballot"><a href="http://hl7.org/fhir/versions.html#std-process">Standards Status</a>: <a style="padding-left: 3px; padding-right: 3px; color: black;" title="Unless otherwise specified explicitly, content on this page is normative.">Normative</a></td></tr></tbody></table>
+
+
+	<h1>7. Physical Representation</h1>
+
+
+
+	<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#schemata">1. Schemata</a>
+<ul class="sectlevel2">
+<li><a href="#media-types-and-namespaces">1.1. Media Types and Namespaces</a></li>
+</ul>
+</li>
+<li><a href="#library-references">2. Library References</a></li>
+<li><a href="#data-model-references">3. Data Model References</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The physical representation for CQL is specifically concerned with communicating the logic involved in any given artifact. As discussed in the previous sections, the unit of distribution for CQL is the library, which corresponds to a single file of CQL at the author level, or a single ELM document at the physical level.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="schemata"><a class="anchor" href="#schemata"></a>1. Schemata</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The physical representation is simply a set of XML schemata which define XML types for each class defined in the ELM UML model. A CQL physical library is then an ELM document with a single <em>Library</em> element as the root.</p>
+</div>
+<div class="paragraph">
+<p>The physical representation for ELM is defined by the following schemata:</p>
+</div>
+<table id="table-7-a" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Schema</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>expression.xsd</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines expression logic components without reference to clinically relevant constructs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>clinicalexpression.xsd</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Introduces expression components that contain clinically-relevant constructs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>library.xsd</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the overall library container for ELM</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 7‑A - The schemata that defines the ELM physical representation</p>
+</div>
+<div class="paragraph">
+<p>As with the logical portion of the specification, this documentation is intended to provide an overview only, the schemata are the actual specification and should be considered the source of truth.</p>
+</div>
+<div class="sect2">
+<h3 id="media-types-and-namespaces"><a class="anchor" href="#media-types-and-namespaces"></a>1.1. Media Types and Namespaces</h3>
+<div class="paragraph">
+<p>The schema for ELM is described for XML using the above XSDs. To support multiple serialization formats, the following media types and namespaces are defined:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Content Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>text/cql</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The content is a text document containing CQL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>text/cql-identifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The content is plain text, containing only the name of a top-level CQL construct such as an expression definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>text/cql-expression</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The content is plain text, containing only a single expression (i.e. a string that can be parsed using the <code>expression</code> production rule of the grammar)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>application/elm+xml</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The content is an ELM document, rendered as XML</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>application/elm+json</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The content is an ELM document, rendered as JSON</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Optionally, a version parameter can be used with CQL and ELM media types to indicate the specification version of the content. The value of the version parameter is always and only the major and minor components of the version of the CQL specification, and can reference any published version of the specification, currently 1.0, 1.1, 1.2, 1.3, 1.4, and 1.5.</p>
+</div>
+<div class="paragraph">
+<p>For example, to specify that a library is CQL version 1.4, the following content type would be used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>text/cql; version=1.4</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Implementations consuming CQL or ELM that has a version indicated by the content type in this way should respect the version specified. Implementations should deal gracefully when processing CQL for versions they do not understand, but this is an implementation decision, especially given the backwards-compatible and future-compatible possibilities of CQL and ELM.</p>
+</div>
+<div class="quoteblock note-info">
+<blockquote>
+<div class="paragraph">
+<p>The text/cql-identifier and text/cql-expression media types, as well as use of the version parameter with all the media types, are new features being introduced in CQL 1.5, and are trial-use.</p>
+</div>
+</blockquote>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Namespace</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>urn:hl7-org:elm:r1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for ELM</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>urn:hl7-org:cql:r1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for CQL</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>When serializing an ELM document using JSON, each XML element is serialized as a JSON object, according to the following rules:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>XML elements and attributes are serialized as JSON attributes of the same name.</p>
+</li>
+<li>
+<p>When necessary to distinguish the type of an object, an extra “type” attribute is added to the JSON representation which contains the name of the ELM class represented by the JSON data.</p>
+</li>
+<li>
+<p>XML namespaces are serialized using curly braces. E.g. "t:Integer" in XML becomes "\{urn:hl7-org:elm-types:r1}Integer" in JSON.</p>
+</li>
+<li>
+<p>Mixed content serialization is not supported, ELM XML documents should not contain mixed content.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="library-references"><a class="anchor" href="#library-references"></a>2. Library References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The implementation environment must provide a mechanism for library references to be resolved based on their names and versions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="data-model-references"><a class="anchor" href="#data-model-references"></a>3. Data Model References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition, the implementation environment must provide a mechanism for data model references to be resolved. At a minimum, the data model definition must define the structure of all the types available within the data model, generally by providing an XSD or similar class structure definition. If the implementation environment is only concerned with translation or execution of ELM documents, then the type structures for each data model are sufficient. However, to fully enable the authoring features of CQL syntax, the data model reference must also define the following:</p>
+</div>
+<table id="table-7-b" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the model.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the model.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The XML namespace associated with the model. This namespace is used by the CQL-to-ELM translator to establish the URL used to reference types from the model schema within an ELM document.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Schema Location</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The physical location of the model xsd relative to the ELM document. This information can be provided, but is not required.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Target Qualifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If specified, determines the namespace qualifier that should be used when referencing types of the data model within the ELM document.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Context Information</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The set of available contexts that may be used with the model. For patient contexts, Patient Birth Date information must be supplied as well to allow the CQL-to-ELM translator to render references to patient-age-related functions (AgeInYears, AgeInYearsAt, etc.) into the non-patient-aware age-related functions in ELM (CalculateAgeInYears, CalculateAgeInYearsAt, etc.). This information is not required, but if it is not present, references to patient-age-related functions will be passed directly through to ELM as FunctionRefs.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 7‑B - The data model reference required components</p>
+</div>
+<div class="paragraph">
+<p>For each type available in the data model, the following information should be provided:</p>
+</div>
+<table id="table-7-c" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the type within the data model. This corresponds to the name of the class within the class model, or the name of the type in the case of an xsd. In FHIR, for example, this corresponds to the name of the underlying resource.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Identifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A unique identifier for the class that may be independent of the name. In FHIR, for example, this corresponds to the profile identifier.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Label</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This information specifies the name of the type as it is referenced from CQL. Note that this need not be a language-valid identifier, as CQL allows quoted-identifiers to be used. However, the label must be unique. In the simplest case, the label corresponds directly with the class name. Whether or not a label is provided, a class can still be referenced from CQL by its name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Primary Code Filter</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the type has the notion of a primary code filter (e.g., Encounter), the name of the attribute that is to be used if no code filter attribute is named within a retrieve</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Retrievable</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A boolean flag indicating whether the class can be referenced as a topic in a retrieve. If this flag is not set, values of this class cannot be retrieved directly, but may still be accessible as elements of other class values.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Context Relationships</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Information about how the data for this type relates to contexts defined in the model. For example, for a Patient context, models may contain a PatientId, providing the linkage to a Patient context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Target Context Relationships</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If applicable, information about how the data for this type can be used to reference contexts. For example, for a RelatedPerson type, the model may contain a LinkedPatientId, providing a reference to a Patient context that can be used in a related-context retrieve.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 7‑C - The required information for each type available in the data model</p>
+</div>
+<div class="paragraph">
+<p>The information defined here is formally described in the modelinfo.xsd document included in the specification. The QUICK module in the CQL-to-ELM translator contains an instance of this schema, quick-modelinfo.xml, which defines this metadata for the QUICK model.</p>
+</div>
+<div class="quoteblock note-info">
+<blockquote>
+<div class="paragraph">
+<p>Note that the actual model info definition and associated artifacts are part of the reference implementation for CQL and not a normative aspect of the CQL specification. CQL only specifies the expected behavior at the conceptual level. How that behavior is achieved with respect to any particular data model is an implementation aspect and not prescribed by this specification.</p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2014+. CQL (Release) (<a href="http://www.hl7.org/Special/committees/dss/index.cfm">Clinical Decision Support WG</a>). hl7.cql#1.5.2 generated on 2023-01-20 11:08:31 +1100
+        <span style="color: #FFFF77">|
+<!--               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fcql.hl7.org%2FSTU2%2F<%rellink%>&amp;doc2=<%baseURL%><%rellink%>">Compare to STU2</a> | -->
+               <a style="color: #81BEF7" rel="license" href="license.html">License</a> |
+               <a style="color: #81BEF7" rel="history" href="http://cql.hl7.org/history.html">Version History</a> |
+               <a style="color: #81BEF7" target="_blank" href="https://jira.hl7.org/issues">Propose a change</a>
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="dist/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/bootstrap.min.js"> </script>
+<script src="dist/respond.min.js"> </script>
+<script src="dist/fhir.js"> </script>
+<script src="dist/sidebar.js"> </script>
+<script src="dist/prism.js"> </script>
+<script src="dist/cql.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+<div id="feedly-mini" title="feedly Mini tookit"></div></body></html>

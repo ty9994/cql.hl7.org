@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://hl7.org/fhir/2016May/FHIRPath.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  <title>6. Translation Semantics</title>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="http://cql.hl7.org" name="author"/>
+
+  <link rel="stylesheet" href="dist/fhir.css"/>
+  <link rel="Prev" href="history.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="dist/bootstrap.css"/>
+  <link rel="stylesheet" href="dist/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="dist/project.css"/>
+  <link rel="stylesheet" href="dist/prism.css"/>
+  <link rel="stylesheet" href="dist/pygments-manni.css"/>
+	<link rel="stylesheet" href="dist/jquery-ui.css"/>
+	<link rel="stylesheet" href="dist/cql.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="dist/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="dist/favicon.png"/>
+
+</head>
+<body data-feedly-mini="yes">
+	<div id="segment-header" class="segment">  <!-- segment-header -->
+		<div class="container">  <!-- container -->
+			<a id="logo" no-external="true" href="index.html"><img alt="Clinical Quality Language" src="dist/cql-logo.png" width="100" height="75"/> </a>
+			<div id="hl7-status">
+				<b>Clinical Quality Language Release 1</b>
+			</div>
+
+			<div id="hl7-nav">
+				 <a id="hl7-logo" no-external="true" href="http://www.hl7.org/">
+					<img height="75" alt="visit the hl7 website" width="100" src="dist/hl7-logo.png"/>
+				</a>
+			</div>
+			<!--<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://cql.hl7.org/search.cfm"><img alt="Search CQL" src="dist/search.png"/></a></div>-->
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a class="navbar-brand hidden" href="index.html">CQL</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li class = "dropdown">
+				  <a href="index.html" class = "dropbtn">Documentation</a>
+			  <div class = "dropdown-content">
+				  <a href="01-introduction.html">Chapter 1 - Introduction</a>
+				  <a href="02-authorsguide.html">Chapter 2 - Author's Guide</a>
+				  <a href="03-developersguide.html">Chapter 3 - Developer's Guide</a>
+				  <a href="04-logicalspecification.html">Chapter 4 - Logical Specification</a>
+				  <a href="05-languagesemantics.html">Chapter 5 - Language Semantics</a>
+				  <a href="06-translationsemantics.html">Chapter 6 - Translation Semantics</a>
+				  <a href="07-physicalrepresentation.html">Chapter 7 - Physical Representation</a>
+				  <a href="08-a-cqlsyntax.html">Appendix A - CQL Syntax Formal Specification</a>
+				  <a href="09-b-cqlreference.html">Appendix B - CQL Reference</a>
+				  <a href="10-c-referenceimplementations.html">Appendix C - Reference Implementations</a>
+				  <a href="11-d-references.html">Appendix D - References</a>
+				  <a href="12-e-acronyms.html">Appendix E - Acronyms</a>
+				  <a href="13-f-glossary.html">Appendix F - Glossary</a>
+				  <a href="14-g-formattingconventions.html">Appendix G - Conventions</a>
+				  <a href="15-h-timeintervalcalculations.html">Appendix H - Time Interval Calculation Examples</a>
+				  <a href="16-i-fhirpathtranslation.html">Appendix I - FHIRPath Function Translation</a>
+				  <a href="17-j-listoftables.html">Appendix J - List Of Tables</a>
+				  <a href="18-k-listoffigures.html">Appendix K - List Of Figures</a>
+          <a href="19-l-cqlsyntaxdiagrams.html">Appendix L - CQL Syntax Diagrams</a>
+			  </div>
+			  </li>
+        <li><a href="02-authorsguide.html">Author's Guide</a></li>
+        <li><a href="03-developersguide.html">Developer's Guide</a></li>
+        <li><a href="09-b-cqlreference.html">CQL Reference</a></li>
+              <li><a href="grammar.html">Grammar</a></li>
+			  <li><a href="elm.html">ELM</a></li>
+			  <li><a href="examples.html">Examples</a></li>
+              <li><a href="tests.html">Tests</a></li>
+							<li><a href="downloads.html">Downloads</a></li>
+              <li><a href="http://cql.hl7.org/history.html">Version History</a><!--current--></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+
+          </div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+
+
+  <!-- /HEADER CONTENT -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
+
+
+<table class="colsn"><tbody><tr><td id="wg"><a href="http://www.hl7.org/special/committees/dss/index.cfm" _target="blank">Clinical Decision Support</a> Work Group</td><td id="fmm"><a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: N</td><td id="ballot"><a href="http://hl7.org/fhir/versions.html#std-process">Standards Status</a>: <a style="padding-left: 3px; padding-right: 3px; color: black;" title="Unless otherwise specified explicitly, content on this page is normative.">Normative</a></td></tr></tbody></table>
+
+
+	<h1>6. Translation Semantics</h1>
+
+
+
+	<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#cql-to-elm">1. CQL-to-ELM</a>
+<ul class="sectlevel2">
+<li><a href="#declarations-1">1.1. Declarations</a></li>
+<li><a href="#types-1">1.2. Types</a></li>
+<li><a href="#literals-and-selectors-1">1.3. Literals and Selectors</a></li>
+<li><a href="#functions">1.4. Functions</a></li>
+<li><a href="#phrases">1.5. Phrases</a></li>
+<li><a href="#queries-3">1.6. Queries</a></li>
+<li><a href="#translation-options">1.7. Translation Options</a></li>
+</ul>
+</li>
+<li><a href="#elm-to-cql">2. ELM-to-CQL</a>
+<ul class="sectlevel2">
+<li><a href="#foreach">2.1. ForEach</a></li>
+<li><a href="#times">2.2. Times</a></li>
+<li><a href="#filter">2.3. Filter</a></li>
+<li><a href="#sort-1">2.4. Sort</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>As discussed in the introductory section, this specification covers three levels of definition, the Conceptual or Author level, the Logical level, and the Physical level. The Conceptual level is concerned with the representation of logic in a format suitable for authoring and consumption by clinical experts; the Physical level is concerned with the representation of logic in a format suitable for processing and transferring by machines; and the Logical level is concerned with providing a mapping between the Conceptual and Physical levels in a way that preserves the semantics of the logic represented while also enabling integration and execution functionality.</p>
+</div>
+<div class="paragraph">
+<p>To achieve these goals, the Logical level establishes a semantically complete bi-directional mapping between the Conceptual and Physical levels. This chapter describes this mapping in more detail, and sketches a process for translation from the Conceptual to the Logical, and from the Logical to the Conceptual. The Physical level is an isomorphic concrete realization of the Logical level; translation between the Logical and Physical levels is therefore a matter of serialization and realization of the data model, and is covered in detail in the <a href="07-physicalrepresentation.html">Physical Representation</a> chapter.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cql-to-elm"><a class="anchor" href="#cql-to-elm"></a>1. CQL-to-ELM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Every statement of CQL has a semantically equivalent representation in ELM. As such, it is possible to programmatically translate any statement of CQL into its equivalent ELM representation. The following sections define the mappings between the language elements of CQL and their equivalent ELM representations, as well as providing a sketch for how these mappings could be used to translate from CQL to ELM.</p>
+</div>
+<div class="sect2">
+<h3 id="declarations-1"><a class="anchor" href="#declarations-1"></a>1.1. Declarations</h3>
+<div class="paragraph">
+<p>In both CQL and ELM, the basic container for all declarations is the <em>Library</em>. In CQL, a library corresponds to a single source document, usually represented as a text file. In ELM, a library is represented as a single instance of the <em>Library</em> class which contains all the declarations for the library.</p>
+</div>
+<div class="paragraph">
+<p>The identifier and version of the library are set as part of the library metadata.</p>
+</div>
+<div class="paragraph">
+<p>The following table specifies the ELM equivalent for each CQL declaration:</p>
+</div>
+<table id="table-6-a" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Declaration</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">library</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Library</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">using</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UsingDef</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">include</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IncludeDef</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">codesystem</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CodeSystemDef</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">valueset</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ValueSetDef</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">parameter</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ParameterDef</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">define</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ExpressionDef</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">function</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FunctionDef</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑A - The ELM equivalent for each CQL declaration</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="types-1"><a class="anchor" href="#types-1"></a>1.2. Types</h3>
+<div class="paragraph">
+<p>To represent types, CQL uses the <em>type-specifier</em> construct. In ELM, an equivalent TypeSpecifier abstract class is defined, with appropriate subclasses to represent the various types of specifiers, as detailed in the following table:</p>
+</div>
+<table id="table-6-b" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Specifier</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>named-type-specifier</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NamedTypeSpecifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>interval-type-specifier</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IntervalTypeSpecifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>list-type-specifier</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ListTypeSpecifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>tuple-type-specifier</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TupleTypeSpecifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>choice-type-specifier</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ChoiceTypeSpecifier</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑B - The ELM equivalent for each CQL type-specifier</p>
+</div>
+<div class="paragraph">
+<p>Note that for named type specifiers, the name of the type is a qualified identifier, with the qualifier representing the name of the data model that defines the type. For example, the system-defined integer type in CQL is named System.Integer, with System as the name of the data model, and Integer as the name of the type.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="literals-and-selectors-1"><a class="anchor" href="#literals-and-selectors-1"></a>1.3. Literals and Selectors</h3>
+<div class="paragraph">
+<p>The following table defines the mapping between the various CQL literals and their equivalent representation in ELM:</p>
+</div>
+<table id="table-6-c" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Literal</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">null</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>boolean-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>integer-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Literal (valueType="Integer")</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>long-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Literal (valueType="Long")</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>decimal-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Literal (valueType="Decimal")</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>quantity-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quantity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>ratio-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ratio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>string-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Literal (valueType="String")</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>date-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>date-time-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DateTime</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>time-literal</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>interval-selector</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interval</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>list-selector</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>tuple-selector</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tuple</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>instance-selector</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instance</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑C - The ELM equivalent for each CQL Literal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="functions"><a class="anchor" href="#functions"></a>1.4. Functions</h3>
+<div class="paragraph">
+<p>Most of the functions and operations available in CQL have a direct counterpart in ELM. For ease of reference, the operations and functions are grouped the same way they are in the CQL Reference.</p>
+</div>
+<div class="sect3">
+<h4 id="logical-operators-2"><a class="anchor" href="#logical-operators-2"></a>1.4.1. Logical Operators</h4>
+<table id="table-6-d" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">and</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">And</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">not</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">or</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Or</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">xor</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw"><strong>implies</strong></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implies</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑D - The ELM equivalent for each CQL logical operator</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="type-operators"><a class="anchor" href="#type-operators"></a>1.4.2. Type Operators</h4>
+<table id="table-6-e" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">as</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">convert</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">is</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Is</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Children</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Children</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Descendents</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Descendents</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑E - The ELM equivalent for each CQL type operator</p>
+</div>
+<div class="paragraph">
+<p>Note that for supported conversions, a more efficient implementation would be to emit a specific operator to perform the conversion, rather than a generic Convert as specified here. For example, consider the following CQL conversion expression:</p>
+</div>
+<div class="paragraph">
+<p>convert B to String</p>
+</div>
+<div class="paragraph">
+<p>Rather than emitting a <em>Convert</em>, an implementation could emit a <em>ToString</em> which took an integer parameter. This would prevent the run-time type check required for implementation of a general purpose <em>Convert</em> operator.</p>
+</div>
+<div class="paragraph">
+<p>Note also that when translating to ELM, an implementation could emit all implicit conversions directly, avoiding the need for an ELM translator or execution engine to deal with implicit conversion.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nullological-operators-2"><a class="anchor" href="#nullological-operators-2"></a>1.4.3. Nullological Operators</h4>
+<table id="table-6-f" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Coalesce</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coalesce</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">is null</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IsNull</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">is false</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IsFalse</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">is true</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IsTrue</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑F - The ELM equivalent for each CQL nullological operator</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="comparison-operators-3"><a class="anchor" href="#comparison-operators-3"></a>1.4.4. Comparison Operators</h4>
+<table id="table-6-g" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">between</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">And of comparisons (for point types) or IncludedIn (for Interval types)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">=</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">&gt;</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Greater</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">&gt;=</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GreaterOrEqual</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">&lt;</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Less</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">&lt;=</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LessOrEqual</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">~</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equivalent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">!=</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NotEqual</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">!~</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not of Equivalent</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑G - The ELM equivalent for each CQL comparison operator</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="arithmetic-operators-3"><a class="anchor" href="#arithmetic-operators-3"></a>1.4.5. Arithmetic Operators</h4>
+<table id="table-6-h" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Abs</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">+</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Ceiling</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ceiling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">/</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Divide</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Floor</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Floor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Exp</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Log</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Ln</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ln</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">maximum</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MaxValue</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">minimum</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MinValue</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">mod</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modulo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">*</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiply</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">-</span> <strong>(unary minus)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Negate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">predecessor</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Predecessor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">^</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Power</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Round</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Round</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">-</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subtract</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">successor</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Successor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Truncate</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Truncate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">div</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TruncatedDivide</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑H - The ELM equivalent for each CQL arithmetic operator</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="string-operators-2"><a class="anchor" href="#string-operators-2"></a>1.4.6. String Operators</h4>
+<table id="table-6-i" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Combine</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Combine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">+</span>, <span class="sym">&amp;</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Concatenate (when &amp; is used, a Coalesce(X, ‘’) is applied to each operand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">EndsWith</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EndsWith</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">[]</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id"><strong>LastPositionOf</strong></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LastPositionOf</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Length</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Lower</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lower</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Matches</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matches</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">PositionOf</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PositionOf</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">ReplaceMatches</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ReplaceMatches</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Split</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Split</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">StartsWith</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">StartsWith</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Substring</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Substring</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Upper</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Upper</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑I - The ELM equivalent for each CQL <span class="kw">String</span> operator</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datetime-operators-1"><a class="anchor" href="#datetime-operators-1"></a>1.4.7. Date and Time Operators</h4>
+<table id="table-6-j" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">+</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">after</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">before</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Before</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Date</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">DateTime</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DateTime</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>component</em></strong> <span class="kw">from</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DateTimeComponentFrom</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">difference</span>..<span class="kw">between</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DifferenceBetween</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">duration</span>..<span class="kw">between</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DurationBetween</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Now</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Now</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">same as</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SameAs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">same or after</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SameOrAfter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">same or before</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SameOrBefore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">-</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subtract</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Time</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">TimeOfDay</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TimeOfDay</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Today</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Today</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑J - The ELM equivalent for each CQL <span class="kw">Date</span> and <span class="kw">Time</span> operator</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="interval-operators-2"><a class="anchor" href="#interval-operators-2"></a>1.4.8. Interval Operators</h4>
+<table id="table-6-k" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">after</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">before</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Before</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">collapse</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collapse</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">contains</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">end of</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">End</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">ends</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ends</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">=</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">except</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Except</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">in</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">includes</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Includes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">during</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IncludedIn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">included in</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IncludedIn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">intersect</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intersect</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">~</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equivalent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">meets</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meets</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">meets after</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MeetsAfter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">meets before</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MeetsBefore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">!=</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NotEqual</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">!~</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not of Equivalent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">overlaps</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Overlaps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">on or after</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SameOrAfter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">on or before</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SameOrBefore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">overlaps after</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OverlapsAfter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">overlaps before</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OverlapsBefore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">point from</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PointFrom</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">properly includes</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ProperlyIncludes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">properly included in</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ProperlyIncludedIn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">properly during</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ProperlyIncludedIn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">start of</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">starts</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">union</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">width of</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Width</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑K - The ELM equivalent for each CQL <span class="kw">Interval</span> operator</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="list-operators-1"><a class="anchor" href="#list-operators-1"></a>1.4.9. List Operators</h4>
+<table id="table-6-l" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">contains</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">distinct</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Distinct</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">=</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">except</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Except</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">exists</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exists</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">flatten</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flatten</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">First</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">in</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">includes</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Includes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">included in</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IncludedIn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">[]</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">IndexOf</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IndexOf</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">intersect</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intersect</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Last</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Length</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">~</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equivalent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">!=</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NotEqual</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">!~</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not of Equivalent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">properly includes</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ProperlyIncludes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">properly included in</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ProperlyIncludedIn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">singleton from</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SingletonFrom</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Skip(n)</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Slice(n, null)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Tail</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Slice(1, null)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Take(n)</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Slice(0, n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">union</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Union</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑L - The ELM equivalent for each CQL <span class="kw">List</span> operator</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="aggregate-operators-2"><a class="anchor" href="#aggregate-operators-2"></a>1.4.10. Aggregate Operators</h4>
+<table id="table-6-m" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">AllTrue</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AllTrue</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">AnyTrue</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AnyTrue</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Avg</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Count</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Count</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">GeometricMean</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GeometricMean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Max</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Min</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Median</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Median</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Mode</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">PopulationStdDev</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PopulationStdDev</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">PopulationVariance</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PopulationVariance</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Product</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Product</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">StdDev</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">StdDev</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Sum</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">Variance</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Variance</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑M - The ELM equivalent for each CQL aggegrate operator</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="clinical-operators-2"><a class="anchor" href="#clinical-operators-2"></a>1.4.11. Clinical Operators</h4>
+<table id="table-6-n" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Operator</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">AgeIn</span><strong><em>-precision</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CalculateAge (with patient birthdate reference supplied)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">AgeIn</span><strong><em>-precision-</em></strong><span class="id">At</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CalculateAgeAt (with patient birthdate reference supplied)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">CalculateAgeIn</span><strong><em>-precision</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CalculateAge</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="id">CalculateAgeIn</span><strong><em>-precision-</em></strong><span class="id">At</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CalculateAgeAt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">=</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sym">~</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equivalent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">in</span> <strong>(Codesystem)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InCodeSystem</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="kw">in</span> <strong>(Valueset)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InValueSet</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑N - The ELM equivalent for each CQL clinical operator</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="phrases"><a class="anchor" href="#phrases"></a>1.5. Phrases</h3>
+<div class="paragraph">
+<p>In general, the various phrases of CQL do not have a direct representation in ELM, but rather result in operator and function invocations which then do have representations. For more information, see the <a href="05-languagesemantics.html#timing-phrases">Timing Phrases</a> section.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="queries-3"><a class="anchor" href="#queries-3"></a>1.6. Queries</h3>
+<div class="paragraph">
+<p>The CQL query construct has a direct representation in ELM, as shown by the following table:</p>
+</div>
+<table id="table-6-o" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CQL Construct</th>
+<th class="tableblock halign-left valign-top">ELM Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>query</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>aliased-query-source</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AliasedQuerySource</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>let-clause</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LetClause</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>with-clause</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">With</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>without-clause</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Without</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>where-clause</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query (where element)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>return-clause</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ReturnClause</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>aggregtate-clause</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AggregateClause</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>sort-clause</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SortClause</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 6‑O - The ELM equivalent for each CQL construct</p>
+</div>
+<div class="paragraph">
+<p>Although these elements can be used to directly represent the <em>query</em> construct of CQL, it is also possible to represent queries using a series of equivalent operations that simplify implementation. ELM defines simplified operations specifically for this purpose. See the <a href="05-languagesemantics.html#implementing-query-evaluation">Implementing Query Evaluation</a> section for more information on how to transform any given CQL query into an equivalent representation using these operators.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="translation-options"><a class="anchor" href="#translation-options"></a>1.7. Translation Options</h3>
+<div class="paragraph">
+<p>There are several points throughout the specification that introduce optionality to support different use cases and implementation goals. This section provides a summary of those options with an explanation of their impact on translation and language features.</p>
+</div>
+<div class="quoteblock note-warning">
+<blockquote>
+<div class="paragraph">
+<p>Note that implementations may define other options as appropriate for their translation use cases, but these options all potentially impact whether a given library of CQL can be correctly compiled, and should therefore be used with care. Implementations that make use of these options should provide facilities for ensuring that these options are communicated as part of the resulting ELM output, as well as that the appropriate options are used if the CQL library is re-translated by consuming environments.</p>
+</div>
+</blockquote>
+</div>
+<div class="sect3">
+<h4 id="disable-list-promotion-and-demotion"><a class="anchor" href="#disable-list-promotion-and-demotion"></a>1.7.1. Disable List Promotion and Demotion</h4>
+<div class="paragraph">
+<p>List promotion and demotion are a special case of implicit conversions and enable list-valued expressions to be passed to singleton parameters (by invoking the <span class="kw">singleton from</span> operator) and vice-versa (by invoking the <span class="id">ToList</span> function). These conversions are useful for writing expressions against models with deeply nested hierarchies and variable cardinality elements, but can sometimes result in surprising overload selections and conversion choices. As a result, implementations may choose to enable or disable this language feature using the <em>disable-list-promotion</em> and <em>disable-list-demotion</em> options. For a more detailed discussion, see <a href="03-developersguide.html#promotion-and-demotion">List Promotion and Demotion</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="disable-list-traversal"><a class="anchor" href="#disable-list-traversal"></a>1.7.2. Disable List Traversal</h4>
+<div class="paragraph">
+<p>In addition to list promotion and demotion, CQL allows for paths to be traversed through list-valued elements. Again, this is useful when writing expressions against models with variable cardinality elements, and can be disabled with the <em>disable-list-traversal</em> option. For a more detailed discussion, see <a href="03-developersguide.html#path-traversal">Path Traversal</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="disable-method-invocation"><a class="anchor" href="#disable-method-invocation"></a>1.7.3. Disable Method Invocation</h4>
+<div class="paragraph">
+<p>To support FHIRPath as the base expression language for CQL, beginning with 1.3, the option to allow functions to be invoked using method-style invocation was introduced. This feature can be disabled using the <em>disable-method-invocation</em> option. For a more complete discussion, see <a href="03-developersguide.html#method-invocation">Method Invocation</a>.</p>
+</div>
+<div class="quoteblock note-warning">
+<blockquote>
+<div class="paragraph">
+<p>Note that with the introduction of <a href="03-developersguide.html#fluent-functions">Fluent Functions</a> in 1.5, using this option effectively disables fluent functions as well.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect3">
+<h4 id="require-from-keyword"><a class="anchor" href="#require-from-keyword"></a>1.7.4. Require From Keyword</h4>
+<div class="paragraph">
+<p>To encourage consistent use of the <span class="kw">from</span> keyword to being queries, implementations may provide support for the <em>require-from-keyword</em> option. See <a href="03-developersguide.html#query-syntax-options">Query Syntax Options</a> for more discussion.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="elm-to-cql"><a class="anchor" href="#elm-to-cql"></a>2. ELM-to-CQL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to being able to translate CQL to ELM, any given expression of ELM can be represented in CQL. Support for this direction of translation would be useful for applications that produce ELM from another source, and need to display a human-readable representation of the logic.</p>
+</div>
+<div class="paragraph">
+<p>This bi-directionality means that a given expression of CQL could be translated to ELM, and then back again. However, because ELM is typically a more primitive representation, this process is not necessarily a “round-trip”. For example, consider the following CQL:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cql" data-lang="cql">A starts within 3 days of start B</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will actually result in the following ELM output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;expression xsi:type="In"&gt;
+  &lt;operand xsi:type="DurationBetween" precision="Day"&gt;
+    &lt;operand xsi:type="Start"&gt;
+      &lt;operand xsi:type="ExpressionRef" name="A"/&gt;
+    &lt;/operand&gt;
+    &lt;operand xsi:type="Start"&gt;
+      &lt;operand xsi:type="ExpressionRef" name="B"/&gt;
+    &lt;/operand&gt;
+  &lt;/operand&gt;
+  &lt;operand xsi:type="Interval"&gt;
+    &lt;low xsi:type="Literal" valueType="xs:int" value="-3"/&gt;
+    &lt;high xsi:type="Literal" valueType="xs:int" value="3"/&gt;
+  &lt;/operand&gt;
+&lt;/expression&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above expression, rendered directly back to CQL would be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cql" data-lang="cql">days between start of A and start of B in [-3, 3]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These expressions are semantically equivalent, but not syntactically the same, as the first is targeted at understandability, while the second is targeted at implementation. To preserve “round-trip” capability, an implementation could emit annotations with the ELM using the extension mechanism of the base <em>Element</em> class to provide the original source CQL.</p>
+</div>
+<div class="paragraph">
+<p>In general, the mapping from ELM to CQL is simply the opposite of the mapping described in the previous section. However, there are several special-purpose operators that are only defined in ELM which are used to simplify query implementation. For completeness, the mappings from those operators to CQL are described here to ensure that any given ELM document could be translated to CQL.</p>
+</div>
+<div class="paragraph">
+<p>The examples in the following section will make use of the following expression definitions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;def name="List1"&gt;
+  &lt;expression xsi:type="List"&gt;
+    &lt;element xsi:type="Tuple"&gt;
+      &lt;element name="X"&gt;
+        &lt;value xsi:type="Literal" valueType="xs:int" value="1"/&gt;
+      &lt;/element&gt;
+    &lt;/element&gt;
+    &lt;element xsi:type="Tuple"&gt;
+      &lt;element name="X"&gt;
+        &lt;value xsi:type="Literal" valueType="xs:int" value="2"/&gt;
+      &lt;/element&gt;
+    &lt;/element&gt;
+    &lt;element xsi:type="Tuple"&gt;
+      &lt;element name="X"&gt;
+        &lt;value xsi:type="Literal" valueType="xs:int" value="3"/&gt;
+      &lt;/element&gt;
+    &lt;/element&gt;
+  &lt;/expression&gt;
+&lt;/def&gt;
+&lt;def name="List2"&gt;
+  &lt;expression xsi:type="List"&gt;
+    &lt;element xsi:type="Tuple"&gt;
+      &lt;element name="Y"&gt;
+        &lt;value xsi:type="Literal" valueType="xs:int" value="1"/&gt;
+      &lt;/element&gt;
+    &lt;/element&gt;
+    &lt;element xsi:type="Tuple"&gt;
+      &lt;element name="Y"&gt;
+        &lt;value xsi:type="Literal" valueType="xs:int" value="2"/&gt;
+      &lt;/element&gt;
+    &lt;/element&gt;
+    &lt;element xsi:type="Tuple"&gt;
+      &lt;element name="Y"&gt;
+        &lt;value xsi:type="Literal" valueType="xs:int" value="3"/&gt;
+      &lt;/element&gt;
+    &lt;/element&gt;
+  &lt;/expression&gt;
+&lt;/def&gt;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="foreach"><a class="anchor" href="#foreach"></a>2.1. ForEach</h3>
+<div class="paragraph">
+<p>The <em>ForEach</em> operator in ELM takes an argument of type list and returns a list with an element for each source element that is the result of evaluating the <em>element</em> expression. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;expression xsi:type="ForEach"&gt;
+  &lt;source xsi:type="ExpressionRef" name="List1"/&gt;
+  &lt;element xsi:type="Property" path="X"/&gt;
+&lt;/expression&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This expression returns the list of integers from the List1 expression. Although there is no direct counterpart in CQL, this expression can be represented using the <em>query</em> construct. The source for the <em>ForEach</em> is used as the primary query source, and the <em>element</em> expression is represented using the <em>return-clause</em>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cql" data-lang="cql">List1 A return A.X</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="times"><a class="anchor" href="#times"></a>2.2. Times</h3>
+<div class="paragraph">
+<p>The <em>Times</em> operator in ELM computes the Cartesian-product of two lists. Again, although there is no direct counterpart in CQL, the <em>query</em> construct can be used to produce an equivalent result:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;expression xsi:type="Times"&gt;
+  &lt;source xsi:type="ExpressionRef" name="List1"/&gt;
+  &lt;source xsi:type="ExpressionRef" name="List2"/&gt;
+&lt;/expression&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assuming List1 and List2 are defined as specified above, the equivalent CQL is a multi-source query with a source for each operand in the <em>Times</em>, and a return clause that builds the resulting tuples:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cql" data-lang="cql">from List1 A, List2 B
+  return { X: A.X, Y: B.Y }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filter"><a class="anchor" href="#filter"></a>2.3. Filter</h3>
+<div class="paragraph">
+<p>The <em>Filter</em> operator in ELM filters the contents of a list, returning only those elements that satisfy the expression defined in the <em>condition</em> element. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;expression xsi:type="Filter"&gt;
+  &lt;source xsi:type="ExpressionRef" name="List1"/&gt;
+  &lt;condition xsi:type="Equal"&gt;
+    &lt;operand xsi:type="Property" path="X"&gt;
+    &lt;operand xsi:type="Literal" valueType="xs:int" value="1"/&gt;
+  &lt;/condition&gt;
+&lt;/expression&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Again, although no direct counterpart in CQL exists, the <em>where</em> clause of the <em>query</em> construct provides the equivalent functionality:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cql" data-lang="cql">List1 A where A.X = 1</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sort-1"><a class="anchor" href="#sort-1"></a>2.4. Sort</h3>
+<div class="paragraph">
+<p>The <em>Sort</em> operator in ELM sorts the contents of a list. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;expression xsi:type="Sort"&gt;
+  &lt;source xsi:type="ExpressionRef" name="List1"/&gt;
+  &lt;by xsi:type="ByColumn" path="X" direction="desc"/&gt;
+&lt;/expression&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Again, the CQL query construct provides the equivalent functionality:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cql" data-lang="cql">List1 A sort by X desc</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2014+. CQL (Release) (<a href="http://www.hl7.org/Special/committees/dss/index.cfm">Clinical Decision Support WG</a>). hl7.cql#1.5.2 generated on 2023-01-20 11:08:31 +1100
+        <span style="color: #FFFF77">|
+<!--               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fcql.hl7.org%2FSTU2%2F<%rellink%>&amp;doc2=<%baseURL%><%rellink%>">Compare to STU2</a> | -->
+               <a style="color: #81BEF7" rel="license" href="license.html">License</a> |
+               <a style="color: #81BEF7" rel="history" href="http://cql.hl7.org/history.html">Version History</a> |
+               <a style="color: #81BEF7" target="_blank" href="https://jira.hl7.org/issues">Propose a change</a>
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="dist/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/bootstrap.min.js"> </script>
+<script src="dist/respond.min.js"> </script>
+<script src="dist/fhir.js"> </script>
+<script src="dist/sidebar.js"> </script>
+<script src="dist/prism.js"> </script>
+<script src="dist/cql.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+<div id="feedly-mini" title="feedly Mini tookit"></div></body></html>

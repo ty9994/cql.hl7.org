@@ -1,0 +1,838 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://cql.hl7.org/ImplementationGuide/hl7.cql> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hl7.cql"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CQL</h2><p>The official URL for this implementation guide is: </p><pre>http://cql.hl7.org/ImplementationGuide/hl7.cql</pre></div>"
+  ]; # 
+  fhir:ImplementationGuide.url [ fhir:value "http://cql.hl7.org/ImplementationGuide/hl7.cql"]; # 
+  fhir:ImplementationGuide.version [ fhir:value "1.5.2"]; # 
+  fhir:ImplementationGuide.name [ fhir:value "CQL"]; # 
+  fhir:ImplementationGuide.title [ fhir:value "Clinical Quality Language Specification"]; # 
+  fhir:ImplementationGuide.status [ fhir:value "active"]; # 
+  fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean]; # 
+  fhir:ImplementationGuide.date [ fhir:value "2023-01-20T11:08:27+11:00"^^xsd:dateTime]; # 
+  fhir:ImplementationGuide.publisher [ fhir:value "Clinical Decision Support WG"]; # 
+  fhir:ImplementationGuide.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/dss/index.cfm" ]
+     ]
+  ]; # 
+  fhir:ImplementationGuide.packageId [ fhir:value "hl7.cql"]; # 
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"]; # 
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.1";
+     fhir:index 0
+  ]; # 
+  fhir:ImplementationGuide.definition [
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-cql-grammar>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-cql-grammar" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-annotated-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-annotated-json" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-annotated-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-annotated-xml" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-cql" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-debug-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-debug-json" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-debug-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-debug-xml" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-json" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-usingcommon-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-usingcommon-cql" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-usingcommon-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-usingcommon-json" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-usingcommon-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-usingcommon-xml" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cds-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cds-xml" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-common-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-common-cql" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-common-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-common-json" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-common-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-common-xml" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cqm-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cqm-cql" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cqm-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cqm-json" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cqm-usingcommon-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cqm-usingcommon-cql" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cqm-usingcommon-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cqm-usingcommon-json" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cqm-usingcommon-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cqm-usingcommon-xml" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-chlamydiascreening-cqm-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-chlamydiascreening-cqm-xml" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms135-qdm-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms135-qdm-cql" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms135-qdm-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms135-qdm-json" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms135-qdm-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms135-qdm-xml" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms146v2-cqm-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms146v2-cqm-cql" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms146v2-cqm-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms146v2-cqm-json" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms146v2-cqm-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms146v2-cqm-xml" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms146v2-qdm-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms146v2-qdm-cql" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms146v2-qdm-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms146v2-qdm-json" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms146v2-qdm-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms146v2-qdm-xml" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms154v1-nqf0069-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms154v1-nqf0069-cql" ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms154v1-nqf0069-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms154v1-nqf0069-json" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms154v1-nqf0069-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms154v1-nqf0069-xml" ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms179v2-cqm-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms179v2-cqm-cql" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms179v2-cqm-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms179v2-cqm-json" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms179v2-cqm-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms179v2-cqm-xml" ]
+       ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms179v2-qdm-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms179v2-qdm-cql" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms179v2-qdm-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms179v2-qdm-json" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms179v2-qdm-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms179v2-qdm-xml" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms26v2-cqm-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms26v2-cqm-cql" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms26v2-cqm-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms26v2-cqm-json" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms26v2-cqm-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms26v2-cqm-xml" ]
+       ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms55v1-nqf0495-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms55v1-nqf0495-cql" ]
+       ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms55v1-nqf0495-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms55v1-nqf0495-json" ]
+       ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms55v1-nqf0495-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms55v1-nqf0495-xml" ]
+       ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms55v1-qdm-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms55v1-qdm-cql" ]
+       ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-cms55v1-qdm-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-cms55v1-qdm-xml" ]
+       ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-example.relatedcontextretrieve-0.1.0-cql>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-example.relatedcontextretrieve-0.1.0-cql" ]
+       ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-example.relatedcontextretrieve-0.1.0-json>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-example.relatedcontextretrieve-0.1.0-json" ]
+       ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-example-example.relatedcontextretrieve-0.1.0-xml>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-example-example.relatedcontextretrieve-0.1.0-xml" ]
+       ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-fhirpath-grammar>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-fhirpath-grammar" ]
+       ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-schema-clinicalexpression>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-schema-clinicalexpression" ]
+       ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-schema-cqlannotations>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-schema-cqlannotations" ]
+       ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-schema-expression>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-schema-expression" ]
+       ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-schema-library>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-schema-library" ]
+       ]
+     ], [
+       fhir:index 54;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-schema-modelinfo>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-schema-modelinfo" ]
+       ]
+     ], [
+       fhir:index 55;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-schema-testschema>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-schema-testschema" ]
+       ]
+     ], [
+       fhir:index 56;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-schema-types>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-schema-types" ]
+       ]
+     ], [
+       fhir:index 57;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqlaggregatefunctionstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqlaggregatefunctionstest" ]
+       ]
+     ], [
+       fhir:index 58;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqlarithmeticfunctionstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqlarithmeticfunctionstest" ]
+       ]
+     ], [
+       fhir:index 59;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqlcomparisonoperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqlcomparisonoperatorstest" ]
+       ]
+     ], [
+       fhir:index 60;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqlconditionaloperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqlconditionaloperatorstest" ]
+       ]
+     ], [
+       fhir:index 61;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqldatetimeoperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqldatetimeoperatorstest" ]
+       ]
+     ], [
+       fhir:index 62;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqlerrorsandmessagingoperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqlerrorsandmessagingoperatorstest" ]
+       ]
+     ], [
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqlintervaloperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqlintervaloperatorstest" ]
+       ]
+     ], [
+       fhir:index 64;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqllistoperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqllistoperatorstest" ]
+       ]
+     ], [
+       fhir:index 65;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqllogicaloperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqllogicaloperatorstest" ]
+       ]
+     ], [
+       fhir:index 66;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqlnullologicaloperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqlnullologicaloperatorstest" ]
+       ]
+     ], [
+       fhir:index 67;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqlstringoperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqlstringoperatorstest" ]
+       ]
+     ], [
+       fhir:index 68;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqltypeoperatorstest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqltypeoperatorstest" ]
+       ]
+     ], [
+       fhir:index 69;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-cqltypestest>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-cqltypestest" ]
+       ]
+     ], [
+       fhir:index 70;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Binary" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://cql.hl7.org/Binary/binary-test-valueliteralsandselectors>;
+         fhir:Reference.reference [ fhir:value "Binary/binary-test-valueliteralsandselectors" ]
+       ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+         fhir:Extension.valueUrl [ fhir:value "index.html" ]
+       ];
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "CQL Specification" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://cql.hl7.org/ImplementationGuide/hl7.cql.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
